@@ -1,0 +1,173 @@
+<!-- <div class="container-fluid">
+    <div class="cards">
+      
+      <h4 class="GIT text-center mt-4 text-light">WELCOME TO GIT-SEARCH</h4>
+      <p class="hub text-center mt-3 text-light">You can search for github users and their repositories.</p>
+  
+      <div class="img"><img src="/src/assets/git-hub.png" alt=""> </div>
+      <div>
+          <img src="src/assets/roman-synkevych-wX2L8L-fGeA-unsplash.jpg" alt="">
+      </div> 
+      <div class="card-body bg-light">
+      <div class="ide mt-5">
+          <label for="username">Enter Github username:</label><br>
+          <input type="text" name="username" id="username" placeholder="Github username">
+          
+      </div><br>
+      <button>Search for Github user & repo</button>
+  
+   
+  
+   
+    </div>
+  </div>
+  </div>   -->
+
+
+    <div class="container">
+    <form class="search-form">
+           <div class="form-group">
+               <input type="search" [(ngModel)]="username" value="" id="username"  name="username"
+                   class="form-control" placeholder="username">
+                   <button type="submit" (click)="searchUser()">Submit</button>
+           </div>
+       
+    </form> 
+        
+   <!-- DISPLAY MY ALREADY DECLARED PROFILE AS WELL AS REPOS -->
+    <div class="container" *ngIf="display">
+       <div class="row">
+           <div class="col-md-4 mt-5 mx-auto" *ngIf="info">
+   
+               <div class="card shadow" style="margin-top: 0px;">
+                   <div class="card-title">
+                       <h4 style="text-align: center; padding-top: 15px; font-weight: bold; color: rgb(0, 110, 255);">User
+                           Profile</h4>
+                   </div>
+                   <div class="card-body">
+                       {{info.length}}
+                       <div class="d-flex justify-content-center">
+                           <a href="#" class="avatar avatar-xl ">
+                               <img class="rounded-circle" alt="..." src="{{info.avatar_url}}">
+                           </a>
+                       </div>
+                       <div class="text-center my-6">
+                           <a href="#" class="d-block h5 mb-0">{{info.login}}</a> <br>
+                           <span class="d-block text-sm text-mute">{{info.bio}}</span>
+                           <span class="d-block text-sm text-muted">{{info.email}}</span>
+                       </div>
+   
+                       <br>
+                       <div class="d-flex">
+                           <div class="col-4 text-center">
+                               <span class="btn btn-primary btn-sm">{{info.public_repos}} Repos</span>
+                           </div>
+                           <div class="col-4 text-center">
+                               <span class="btn btn-primary btn-sm">{{info.followers}} Followers</span>
+                           </div>
+                           <div class="col-4 text-center">
+                               <span class="btn btn-primary btn-sm">Following {{info.following}}</span>
+                           </div>
+   
+                       </div>
+                   </div>
+               </div>
+           </div> 
+            End of my profile card -->
+   
+            <div class="col-md-8">
+               <div class="row">
+                   <div class="col-md-4 card" *ngFor="let repo of repos">
+                       <a href="{{repo.html_url}}" class="github-card" data-github="Nexmo/nexmo-ruby">
+                           <h4>{{repo.name}}</h4>
+                           <p style="color: black;">{{repo.description}}</p>
+                           <p style="color: black;">{{repo.created_at | date}}</p>
+           
+                           <span class="github-card__meta">
+                               <p style="color: #0f0f0f;"> {{repo.language}} </p>
+                           </span>
+           
+                           <span class="github-card__meta">
+                               <p style="color: black;">{{repo.forks_count}}Forks </p>
+                           </span>
+                       </a>
+                   </div>
+               </div>
+           </div>  
+            <!-- End of my repo info section  -->
+   
+        </div>
+   </div>
+   <div>
+       {{profile.login}}
+   
+   </div> -->
+       <!-- DISPLAY OTHER USERNAMES PROFILE THAT HAVE BEEN SEARCHED  -->
+       <div class="container" *ngIf="!display">
+           <div class="row">
+               <div class="col-md-4">
+                   <div class="mt-5 mx-auto">
+                       <div class="card show-profile">
+                           <div class="card-title">
+                               <h4 style="text-align: center; padding-top: 15px; font-weight: bold; color: rgb(0, 110, 255);">
+                                   User Profile</h4>
+                           </div>
+                           <div class="card-body">
+                               <div class="d-flex justify-content-center">
+                                   <a href="#" class="avatar avatar-xl ">
+                                       <img class="rounded-circle" alt="..." [src]="profile.avatar_url">
+                                   </a>
+                               </div> -->
+                               <div class="text-center my-6">
+                                   <a href="#" class="d-block h5 mb-0">{{profile.login}}</a><br>
+                                   <span class="d-block text-sm text-mute">{{profile.bio}}</span>
+                                   <span class="d-block text-sm text-muted">{{profile.email}}</span>
+                               </div>
+                               <br>
+                               <div class="d-flex">
+                                   <div class="col-4 text-center">
+                                       <span class="btn btn-primary btn-sm">{{profile.public_repos}} Repos</span>
+                                   </div>
+                                   <div class="col-4 text-center">
+                                       <span class="btn btn-primary btn-sm">{{profile.followers}} Followers</span>
+                                   </div> -->
+                                   <div class="col-4 text-center">
+                                       <span class="btn btn-primary btn-sm">Following{{profile.following}}</span>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+       
+                   <div class="mt-8 text-center"><br>
+                       <a href="{{profile.html_url}}" class="btn btn-primary" target="_blank">See profile in github </a>
+                       <br>
+                   </div>
+       
+               </div> -->
+               <!-- End of profile card for searched username  -->
+       
+                <div class="col-md-8 new-users" style="color: rgb(48, 47, 47);">
+                   <div class="row">
+                       <div>
+                           <div class="mt-8 text-center" *ngIf="repos"><br>
+                               <a href="{{profile.html_url}}" class="btn btn-primary btn-sm repo-btn" target="_blank">View
+                                   {{profile.login}} Repos</a>
+                                 href="{{repos.html_url}}"   
+                               <br>
+                           </div>
+                       </div>
+                       <div class="col-md-4 card" *ngFor="let repo of repos">
+                           <a href="{{repo.html_url}}" class="github-card" data-github="Nexmo/nexmo-ruby">
+                               <h4>{{repo.name}}</h4>
+                               <p style="color: black;">{{repo.description}}</p>
+                               <p style="color: black;">{{repo.created_at | date}}</p>
+                           </a>
+                       </div>
+                   </div>
+               </div> -->
+                <!-- End of repos info for searched username  -->
+           </div>
+       </div>
+   </div>
+    
