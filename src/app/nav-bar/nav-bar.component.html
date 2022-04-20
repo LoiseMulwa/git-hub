@@ -10,17 +10,18 @@
     </li>
 
   </ul> -->
+  
   <div class="top  text-center bg-dark">
-  <nav class="navbar navbar-expand-lg navbar-dark">
+  <nav class="navbar navbar-expand-lg navbar">
     <!-- <a class="navbar-brand" routerLink="/goals"><b>GOALS APP</b></a> -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-item nav-link active " routerLink="nav-bar" routerLinkActive='active bg-info '>Home<span class="sr-only"></span></a>
-        <a class="nav-item nav-link active " routerLink="profile" routerLinkActive='active bg-info '>Profile<span class="sr-only"></span></a>
-        <a class="nav-item nav-link bg-secondary" routerLink="repos" routerLinkActive='active bg-info'>Repositories</a>
+        <a class="nav-item nav-link active " routerLink="nav-bar" routerLinkActive='active bg-light '><span class="sr-only">Home</span></a>
+        <a class="nav-item nav-link active " routerLink="profile" routerLinkActive='active bg-light '><span class="sr-only">Profile</span></a>
+        <a class="nav-item nav-link bg-secondary" routerLink="repos" routerLinkActive='active bg-light'><span class="sr-only">Repositories </span></a>
 
       </div>
     </div>
@@ -28,21 +29,10 @@
  
 </div>
 
-<div class="container-fluid">
-    <h4 class="GIT text-center mt-4">WELCOME TO GIT-SEARCH</h4>
-    <p class="hub text-center mt-3">You can search for github users and their repositories.</p>
-    <div>
-        <img src="src/assets/roman-synkevych-wX2L8L-fGeA-unsplash.jpg" alt="">
-    </div>
-    <div class="ide mt-5">
-        <label for="username">Enter Github username:</label><br>
-        <input type="text" name="username" id="username" placeholder="Github username">
-        
-    </div><br>
-    <button>Search for Github user & repo</button>
+<app-form></app-form>
 
- 
+<footer>
+  <p class="footer  mt-5 text-center"> &#169; All rights reserved 2022 .</p>
 
- 
 
-</div>
+</footer>

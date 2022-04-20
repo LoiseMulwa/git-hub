@@ -2,12 +2,7 @@
     align-items: center;
     margin-left: 50%;   
 }
-.ide,button{
-    margin-left:35%;   
-}
-input{
+.footer{
     height: 40px;
-    width: 400px;
+    background-color: #add8e6;
 }
-
-
