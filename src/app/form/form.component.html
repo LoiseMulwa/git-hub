@@ -28,7 +28,7 @@
     <form class="search-form">
            <div class="form-group">
                <input type="search" [(ngModel)]="username" value="" id="username"  name="username"
-                   class="form-control" placeholder="username">
+                   class="form-control" placeholder="Enter your username...">
                    <!-- <button type="submit" (click)="searchUser()">Submit</button> -->
            </div>
        
@@ -41,7 +41,7 @@
    
                <div class="card shadow" style="margin-top: 0px;">
                    <div class="card-title">
-                       <h4 style="text-align: center; padding-top: 15px; font-weight: bold; color: #add8e6;">User
+                       <h4 style="text-align: center; padding-top: 15px; font-weight: bold; color: black;">User
                            Profile</h4>
                    </div>
                    <div class="card-body">
@@ -60,13 +60,13 @@
                        <br>
                        <div class="d-flex">
                            <div class="col-4 text-center">
-                               <span class="btn btn-primary btn-sm">{{info.public_repos}} Repos</span>
+                               <span class="btn btn-secondary btn-sm">{{info.public_repos}} Repos</span>
                            </div>
                            <div class="col-4 text-center">
-                               <span class="btn btn-primary btn-sm">{{info.followers}} Followers</span>
+                               <span class="btn btn-secondary btn-sm">{{info.followers}} Followers</span>
                            </div>
                            <div class="col-4 text-center">
-                               <span class="btn btn-primary btn-sm">Following {{info.following}}</span>
+                               <span class="btn btn-secondary btn-sm">Following {{info.following}}</span>
                            </div>
    
                        </div>
@@ -94,7 +94,7 @@
                    </div>
                </div>
            </div>  
-            <!-- End of my repo info section  -->
+            
    
         </div>
    </div>
@@ -102,7 +102,7 @@
        {{profile.login}}
    
    </div> -->
-       <!-- DISPLAY OTHER USERNAMES PROFILE THAT HAVE BEEN SEARCHED  -->
+       
        <div class="container" *ngIf="!display">
            <div class="row">
                <div class="col-md-4">
@@ -145,7 +145,7 @@
                    </div>
        
                </div> -->
-               <!-- End of profile card for searched username  -->
+             
        
                 <div class="col-md-8 new-users" style="color: rgb(48, 47, 47);">
                    <div class="row">
@@ -166,7 +166,7 @@
                        </div>
                    </div>
                </div> -->
-                <!-- End of repos info for searched username  -->
+
            </div>
        </div>
    </div>

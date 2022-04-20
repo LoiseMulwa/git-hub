@@ -39,23 +39,4 @@ export class AppModule { }
 
 
 
-// @NgModule({
-//   declarations: [
-//     AppComponent,
-  
-//     NavbarComponent,
-//     GitFormComponent,
-//     ProfileComponent,
-//     UserComponent,
-//     RepositoryComponent
-//   ],
-  // imports: [
-  //   BrowserModule,
-  //   AppRoutingModule,
-  //   FormsModule,
-  //   HttpClientModule
-  // ],
-//   providers: [ProfileService],
-//   bootstrap: [AppComponent]
-// })
-// export class AppModule { }
+
