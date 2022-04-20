@@ -13,7 +13,7 @@ input{
     background-image: url("/src/assets/git-hub.png");
     
 }
-button{
+/* button{
     height: 40px;
     width: 400px;
     border: 1px solid #add8e6;
@@ -21,8 +21,8 @@ button{
     background-color:#add8e6;
     color: black;
     font-weight: bold;
-}
-.card-body{
+} */
+/* .card-body{
     height: 400px;
     width: 50%;
     margin-left: 25%;
@@ -31,5 +31,10 @@ button{
 
 .sr-only{
     color:  #add8e6;
+} */
+#username{
+    margin-top: 1cm;
+    margin-left: 25%;
+    width: 500px;
+    background-color: #add8e6;
 }
-
